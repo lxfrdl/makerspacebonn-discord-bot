@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
     implementation("com.discord4j:discord4j-core:3.2.7")
-    implementation("io.projectreactor:reactor-core:3.4.12")
+    implementation("io.projectreactor:reactor-core:3.7.2")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.6.4")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1")
     testImplementation(kotlin("test"))
