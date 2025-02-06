@@ -18,7 +18,7 @@ dependencies {
     testImplementation(kotlin("test"))
     implementation("org.slf4j:slf4j-api:2.0.0")
     implementation("io.github.cdimascio:dotenv-kotlin:6.2.2")
-    implementation("org.slf4j:slf4j-simple:2.0.0")
+    implementation("org.slf4j:slf4j-simple:2.0.16")
 }
 
 application {
