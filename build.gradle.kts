@@ -14,7 +14,7 @@ dependencies {
     implementation("com.discord4j:discord4j-core:3.2.7")
     implementation("io.projectreactor:reactor-core:3.4.12")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:1.6.4")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1")
     testImplementation(kotlin("test"))
     implementation("org.slf4j:slf4j-api:2.0.0")
     implementation("io.github.cdimascio:dotenv-kotlin:6.2.2")
