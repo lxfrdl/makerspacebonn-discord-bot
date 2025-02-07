@@ -18,3 +18,9 @@ spec:
           command: ['sh', '-c', 'echo Hello, World! && sleep 3600']
           ports:
             - containerPort: 8080
+          env:
+            - name: DISCORD_TOKEN
+              valueFrom:
+                secretKeyRef:
+                  name: discord-token
+                  key: DISCORD_TOKEN
