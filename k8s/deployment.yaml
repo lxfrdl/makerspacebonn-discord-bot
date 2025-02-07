@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: makerspacebonn-discord-bot
-          image: ghcr.io/lxfrdl/makerspacebonn-discord-bot:110db1ae9746744970dde65f046aa802aaef6c66
+          image: ghcr.io/lxfrdl/makerspacebonn-discord-bot:852a635c11a3360334f9928d533249532b1b3d93
           ports:
             - containerPort: 8080
           env:
