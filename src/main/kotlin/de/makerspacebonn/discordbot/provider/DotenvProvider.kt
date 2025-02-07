@@ -3,5 +3,8 @@ package de.makerspacebonn.discordbot.provider
 import io.github.cdimascio.dotenv.dotenv
 
 object DotenvProvider {
-    val dotenv = dotenv()
+    val dotenv = dotenv {
+        ignoreIfMissing = true
+        ignoreIfMalformed = true
+    }
 }

@@ -18,16 +18,9 @@ class CredentialsProvider(private val args: Array<String>) {
         return DotenvProvider.dotenv[DISCORD_TOKEN_NAME]
     }
 
-    private fun systemEnv(): String? {
-        return System.getenv(DISCORD_TOKEN_NAME)
-    }
-
-    private fun String.inform(source: String) = this.also { logger.info("Found credentials in $source") }
-
     val discordToken by lazy {
-        firstArgument()?.inform("first argument")
-            ?: dotEnv()?.inform(".env file")
-            ?: systemEnv()?.inform("env var")
+        firstArgument()
+            ?: dotEnv()
             ?: run {
                 throw IllegalStateException(
                     "No Discord token found. Please provide it " +
