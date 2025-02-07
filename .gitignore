@@ -29,3 +29,6 @@ generated/
 
 # Environment variables
 .env
+
+# gradle wrapper
+!gradle-wrapper.jar
