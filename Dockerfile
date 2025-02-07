@@ -2,7 +2,7 @@
 FROM eclipse-temurin:21-jdk as build
 
 # Set the working directory
-WORKDIR /app
+WORKDIR /work
 
 # Copy the Gradle wrapper and project files
 COPY gradlew gradlew
@@ -24,7 +24,7 @@ FROM amazoncorretto:21-alpine-jdk
 WORKDIR /app
 
 # Copy the JAR file from the build stage
-COPY --from=build /app/build/libs/makerspacebonn-discord-bot.jar /app/app.jar
+COPY --from=build /work/build/libs/makerspacebonn-discord-bot.jar /app/app.jar
 
 # Expose the port your application runs on
 EXPOSE 8080
