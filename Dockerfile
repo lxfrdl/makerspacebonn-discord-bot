@@ -24,7 +24,7 @@ FROM amazoncorretto:21-alpine-jdk
 WORKDIR /app
 
 # Copy the JAR file from the build stage
-COPY --from=build /work/build/libs/makerspacebonn-discord-bot.jar /app/app.jar
+COPY --from=build /work/build/libs/*.jar /app/app.jar
 
 # Expose the port your application runs on
 EXPOSE 8080
