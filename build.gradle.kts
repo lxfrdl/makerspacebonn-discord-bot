@@ -1,6 +1,9 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 plugins {
     kotlin("jvm") version "2.1.10"
     application
+    id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
 group = "de.makerspacebonn"
@@ -27,4 +30,33 @@ application {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+kotlin {
+    jvmToolchain(21)
+}
+
+tasks.withType<ShadowJar> {
+    archiveClassifier.set("")
+    mergeServiceFiles()
+}
+
+tasks.build {
+    dependsOn(tasks.shadowJar)
+}
+
+tasks.distZip {
+    dependsOn(tasks.shadowJar)
+}
+
+tasks.distTar {
+    dependsOn(tasks.shadowJar)
+}
+
+tasks.startScripts {
+    dependsOn(tasks.shadowJar)
+}
+
+tasks.startShadowScripts {
+    dependsOn(tasks.jar)
 }
