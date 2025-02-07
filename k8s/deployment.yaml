@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
         - name: makerspacebonn-discord-bot
-          image: busybox
-          command: ['sh', '-c', 'echo Hello, World! && sleep 3600']
+          image: ghcr.io/lxfrdl/makerspacebonn-discord-bot:latest
           ports:
             - containerPort: 8080
           env:
