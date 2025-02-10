@@ -20,7 +20,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.1")
     testImplementation(kotlin("test"))
     implementation("org.slf4j:slf4j-api:2.0.16")
-    implementation("io.github.cdimascio:dotenv-kotlin:6.2.2")
+    implementation("io.github.cdimascio:dotenv-kotlin:6.5.0")
     implementation("org.slf4j:slf4j-simple:2.0.16")
 }
 
